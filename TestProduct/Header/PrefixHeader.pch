@@ -1,0 +1,100 @@
+//
+//  PrefixHeader.pch
+//  TestProduct
+//
+//  Created by homebox on 2018/4/28.
+//  Copyright © 2018年 homebox. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "AFNetworking.h"
+#import <DKNightVersion/DKNightVersion.h>
+#import "FMDB.h"
+
+// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+#define MAS_SHORTHAND
+// 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
+#define MAS_SHORTHAND_GLOBALS
+#import "Masonry.h"
+
+#import "MBProgressHUD.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "MMDrawerController.h"
+#import "SDCycleScrollView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <YYKit/YYKit.h>
+
+
+// 自定义分类的添加
+#import "UIButton+JRButtonCategory.h"
+#import "UIImage+JRImageCategory.h"
+#import "UIColor+JRColorCategory.h"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 帮助实现单例设计模式
+// .h文件的实现
+#define ShareSingleH(methodName) + (instancetype)shared##methodName;
+// .m文件的实现
+#if __has_feature(objc_arc) // 是ARC
+#define ShareSingleM(methodName) \
+static id _instace = nil; \
++ (id)allocWithZone:(struct _NSZone *)zone \
+{ \
+if (_instace == nil) { \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+_instace = [super allocWithZone:zone]; \
+}); \
+} \
+return _instace; \
+} \
+\
+- (id)init \
+{ \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+_instace = [super init]; \
+}); \
+return _instace; \
+} \
+\
++ (instancetype)shared##methodName \
+{ \
+return [[self alloc] init]; \
+} \
++ (id)copyWithZone:(struct _NSZone *)zone \
+{ \
+return _instace; \
+} \
+\
++ (id)mutableCopyWithZone:(struct _NSZone *)zone \
+{ \
+return _instace; \
+}
+#endif
+
+
+
+
+#endif /* PrefixHeader_pch */

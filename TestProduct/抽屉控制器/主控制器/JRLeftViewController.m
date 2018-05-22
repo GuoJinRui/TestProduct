@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"左控制器";
-    self.dataArray = [NSMutableArray arrayWithObjects:@"NSArray结构", @"NSDictionary结构", @"Class结构", @"响应者链测试", @"GCD", @"webView交互", nil];
+    self.dataArray = [NSMutableArray arrayWithObjects:@"NSArray结构", @"NSDictionary结构", @"Class结构", @"响应者链测试", @"GCD", @"UIWebView交互", nil];
 //    _pushClassName = @[@"JRArrayStructureViewController", @"JRDictionaryStructureViewController", @"JRClassStructureViewController", @"JRResponderChainViewController"];
     self.mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:(UITableViewStyleGrouped)];
     self.mainTableView.delegate = self;

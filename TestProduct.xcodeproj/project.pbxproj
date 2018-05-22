@@ -44,6 +44,8 @@
 		3DC68F1B20AC2DB70093F222 /* JRCodeEncryptOrDecrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68F1920AC2DB70093F222 /* JRCodeEncryptOrDecrypt.m */; };
 		3DC68F3520B266840093F222 /* JRWebViewMutualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68F3420B266840093F222 /* JRWebViewMutualViewController.m */; };
 		3DC68F3720B29B5E0093F222 /* wespace.cer in Resources */ = {isa = PBXBuildFile; fileRef = 3DC68F3620B29B5E0093F222 /* wespace.cer */; };
+		3DC68F3E20B3BEB90093F222 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3DC68F3D20B3BEB90093F222 /* index.html */; };
+		3DC68F4120B3EB460093F222 /* JRWKWebViewMutualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68F4020B3EB460093F222 /* JRWKWebViewMutualViewController.m */; };
 		3DF53E5820901A160052DB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF53E5720901A160052DB1F /* Assets.xcassets */; };
 		3DF53E6820901A170052DB1F /* TestProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF53E6720901A170052DB1F /* TestProductTests.m */; };
 		3DF53E7320901A170052DB1F /* TestProductUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF53E7220901A170052DB1F /* TestProductUITests.m */; };
@@ -141,6 +143,9 @@
 		3DC68F3320B266840093F222 /* JRWebViewMutualViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRWebViewMutualViewController.h; sourceTree = "<group>"; };
 		3DC68F3420B266840093F222 /* JRWebViewMutualViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRWebViewMutualViewController.m; sourceTree = "<group>"; };
 		3DC68F3620B29B5E0093F222 /* wespace.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = wespace.cer; sourceTree = "<group>"; };
+		3DC68F3D20B3BEB90093F222 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		3DC68F3F20B3EB460093F222 /* JRWKWebViewMutualViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRWKWebViewMutualViewController.h; sourceTree = "<group>"; };
+		3DC68F4020B3EB460093F222 /* JRWKWebViewMutualViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRWKWebViewMutualViewController.m; sourceTree = "<group>"; };
 		3DF53E4B20901A160052DB1F /* TestProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF53E5720901A160052DB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF53E6320901A170052DB1F /* TestProductTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProductTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +360,9 @@
 				3DC68F0C20A58C260093F222 /* GCDViewController.m */,
 				3DC68F3320B266840093F222 /* JRWebViewMutualViewController.h */,
 				3DC68F3420B266840093F222 /* JRWebViewMutualViewController.m */,
+				3DC68F3F20B3EB460093F222 /* JRWKWebViewMutualViewController.h */,
+				3DC68F4020B3EB460093F222 /* JRWKWebViewMutualViewController.m */,
+				3DC68F3D20B3BEB90093F222 /* index.html */,
 			);
 			path = "左边子控制器";
 			sourceTree = "<group>";
@@ -593,6 +601,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC68F3E20B3BEB90093F222 /* index.html in Resources */,
 				3DC68F3720B29B5E0093F222 /* wespace.cer in Resources */,
 				3DF53E5820901A160052DB1F /* Assets.xcassets in Resources */,
 				3D8FF6EF209185FF0016B295 /* Main.storyboard in Resources */,
@@ -712,6 +721,7 @@
 				3D0259BE209AD38A008CEDBB /* UIColor+JRColorCategory.m in Sources */,
 				3DC68F1020A91D830093F222 /* BasePresentNavigationViewController.m in Sources */,
 				3D0259DA209AE50D008CEDBB /* JRSecondViewController.m in Sources */,
+				3DC68F4120B3EB460093F222 /* JRWKWebViewMutualViewController.m in Sources */,
 				3D0259FF20A290D7008CEDBB /* JRDictionaryStructureViewController.m in Sources */,
 				3DC68F0D20A58C260093F222 /* GCDViewController.m in Sources */,
 				3D0259ED20A0566E008CEDBB /* JRTransitionDelegate.m in Sources */,
@@ -899,7 +909,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/homebox/Desktop/TestProduct/TestProduct/Header/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/homebox/Desktop/Git/TestProduct/Header/PrefixHeader.pch;
 				INFOPLIST_FILE = TestProduct/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -921,7 +931,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/homebox/Desktop/TestProduct/TestProduct/Header/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/homebox/Desktop/Git/TestProduct/Header/PrefixHeader.pch;
 				INFOPLIST_FILE = TestProduct/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

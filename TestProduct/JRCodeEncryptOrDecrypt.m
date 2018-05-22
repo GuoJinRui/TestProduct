@@ -108,7 +108,6 @@
     SecTrustRef trust;
     OSStatus returnCode = SecTrustCreateWithCertificates(certificate, policy, &trust);
     if (returnCode != noErr) { // noErr 即 0
-//        NSLog(@"SecTrustCreateWithCertificates fail. Error Code: %d", (int)returnCode);
         CFRelease(certificate);
         CFRelease(policy);
         CFRelease(trust);

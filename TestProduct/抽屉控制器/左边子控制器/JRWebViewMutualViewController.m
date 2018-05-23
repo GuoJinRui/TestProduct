@@ -9,11 +9,18 @@
 #import "JRWebViewMutualViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@interface JRWebViewMutualViewController ()<UIWebViewDelegate>
+// JS调用OC
+@protocol JSObjcDelegate <JSExport>
+//协议的方法必须和JS里面的方法名称保持一致才有效!
+- (void)callShare;
+
+@end
+
+
+@interface JRWebViewMutualViewController ()<UIWebViewDelegate, JSObjcDelegate>
 
 @property (nonatomic,strong) JSContext * jsContext;// 获取交互环境，主要用于调取JS代码
 @property(strong,nonatomic)UIWebView * mainWebView;
-
 
 @end
 
@@ -33,15 +40,12 @@
     [rightBut_2 addTarget:self action:@selector(rightButAction:) forControlEvents:(UIControlEventTouchUpInside)];
     UIBarButtonItem * rightItem_2 = [[UIBarButtonItem alloc] initWithCustomView:rightBut_2];
     self.navigationItem.rightBarButtonItems = @[rightItem_1, rightItem_2];
-//    self.mainWebView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    self.mainWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-
-//    NSLog(@"%@", NSStringFromCGRect(self.webView.frame));
-
+    self.mainWebView = [[UIWebView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.mainWebView];
     self.mainWebView.delegate = self;
     NSString * str = [[NSBundle mainBundle] pathForResource:@"index.html" ofType:nil];
 //    NSURL *pathUrl = [[NSBundle mainBundle] URLForResource:@"index" withExtension:@"html"];
+    
     [self.mainWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
 }
 
@@ -68,11 +72,23 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    self.jsContext = [self.mainWebView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
-    // 初始化JSContext
-//    JSContext *context=[webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
-//    NSString *jsFunctStr= [NSString stringWithFormat:@"submitLogin()"];
-//    [context evaluateScript:jsFunctStr];
+    self.jsContext[@"callCamera"] = ^() {
+        NSLog(@"调用Camera了🙄");
+    };
+    
+    /**
+        在JS中 onclick="callCamera()" 指的是点击button直接触发callCamera方法；
+        onclick="TEXT.callShare() 指点击button会让一个叫做TEXT的对象去触发callShare方法;
+     */
+    
+    //在使用JSExport协议类时必须有指定的执行对象才能使用否则使用block形式的回调即可
+    self.jsContext[@"TEXT"] = self;
+    // 若发生异常会执行此方法
+    self.jsContext.exceptionHandler = ^(JSContext *context, JSValue *exception) {
+        NSLog(@"异常信息是%@",exception);
+    };
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
@@ -87,14 +103,21 @@
         NSString * jsStr = [NSString stringWithFormat:@"picCallback('%@')", @"stringByEvaluatingJavaScriptFromString方法实现"];
         [self.mainWebView stringByEvaluatingJavaScriptFromString:jsStr];
     }else{
-        self.jsContext = [self.mainWebView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
         // 获取 将字符串对应的JS方法，转换成一个JSValue对象
         JSValue * jsValue = [self.jsContext evaluateScript:@"picCallback"];
         // 下面👇这一方法与上面的等效
 //        JSValue * jsValue = self.jsContext[@"picCallback"];
-        // 作为一个函数调用JSValue 参数是JS函数所需参数
+        // 作为一个函数调用JSValue 参数是JS函数所需参数,该方法用于传参
         [jsValue callWithArguments:@[@"javaScript实现"]];
+        
+        // 与上面两句代码等效代码
+//        [self.jsContext evaluateScript:[NSString stringWithFormat:@"picCallback('%@')", @"javaScript实现"]];
     }
+}
+
+- (void)callShare
+{
+    NSLog(@"调用Share了🙄");
 }
 
 - (void)didReceiveMemoryWarning {

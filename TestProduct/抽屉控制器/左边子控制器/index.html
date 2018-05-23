@@ -5,7 +5,7 @@
     <title>OC-JS交互</title>
 </head>  
 <body>  
-    <div style="margin-top: 10px">
+    <div style="margin-top: 30px">
         <input type="button" value="调用OC原生代码示例 - 拦截协议，跳转界面" onclick="window.open('need://transform')" style = "width:300px;height:30px;border:0px;background-color:red;margin-left:10px" >
     </div>         
   
@@ -19,44 +19,20 @@
     <div>
         
     <div style="margin-top: 10px">
-        <input type="button" value="调用OC原生代码示例 - JSCore,跳转界面" onclick="Hevin.callCamera()" style = "width:300px;height:30px;border:0px;background-color:red;margin-left:10px" >
+        <input type="button" value="调用OC原生代码示例 - JSCore,跳转界面" onclick="callCamera()" style = "width:300px;height:30px;border:0px;background-color:red;margin-left:10px" >
             </div>
     
     <div>
-        <input type="button" value="调用OC原生代码示例 - JSCore，本界面做操作" onclick="callShare()" style = "width:300px;height:30px;border-style:none; background-color:#FF9;margin-left:10px; margin-top:10px">
+        <input type="button" value="调用OC原生代码示例 - JSCore，本界面做操作" onclick="TEXT.callShare()" style = "width:300px;height:30px;border-style:none; background-color:#FF9;margin-left:10px; margin-top:10px">
             </div>
-    <div>
-        <img id = "image" src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496925996605&di=391d20f11010a2d8f9f288c5fde1c304&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201505%2F24%2F20150524182423_tNwRF.thumb.700_0.jpeg"  alt="上海鲜花港 - 郁金香" style = "width:375px;margin-top:20px"/>
-    </div>
   
 <script>  
-    var callShare = function() {
-        
-        return 'need://transform';
-    }  
-  
+
     var picCallback = function(photos) {  
         alert(photos);  
     }  
-  
-    var shareCallback = function(){
-     
-     //调用修改图片的API
-     changeIamge();
 
-     
-        
-    }  
 </script>
-<script>
-    //修改图片的API
-    function changeIamge(){
-        
-        var element = document.getElementById('image');
 
-            element.src = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496926034716&di=5f208a2850a2aeb9b9184f0d1f7d2f14&imgtype=0&src=http%3A%2F%2Fimg4.duitang.com%2Fuploads%2Fitem%2F201512%2F23%2F20151223124910_WTJdf.jpeg";
-            
-    }
-    </script>
 </body>  
 </html>  

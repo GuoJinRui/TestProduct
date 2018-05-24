@@ -46,6 +46,7 @@
 		3DC68F3720B29B5E0093F222 /* wespace.cer in Resources */ = {isa = PBXBuildFile; fileRef = 3DC68F3620B29B5E0093F222 /* wespace.cer */; };
 		3DC68F3E20B3BEB90093F222 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 3DC68F3D20B3BEB90093F222 /* index.html */; };
 		3DC68F4120B3EB460093F222 /* JRWKWebViewMutualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68F4020B3EB460093F222 /* JRWKWebViewMutualViewController.m */; };
+		3DC68F4420B66B6B0093F222 /* JRStringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC68F4320B66B6B0093F222 /* JRStringViewController.m */; };
 		3DF53E5820901A160052DB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF53E5720901A160052DB1F /* Assets.xcassets */; };
 		3DF53E6820901A170052DB1F /* TestProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF53E6720901A170052DB1F /* TestProductTests.m */; };
 		3DF53E7320901A170052DB1F /* TestProductUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF53E7220901A170052DB1F /* TestProductUITests.m */; };
@@ -146,6 +147,8 @@
 		3DC68F3D20B3BEB90093F222 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		3DC68F3F20B3EB460093F222 /* JRWKWebViewMutualViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRWKWebViewMutualViewController.h; sourceTree = "<group>"; };
 		3DC68F4020B3EB460093F222 /* JRWKWebViewMutualViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRWKWebViewMutualViewController.m; sourceTree = "<group>"; };
+		3DC68F4220B66B6B0093F222 /* JRStringViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRStringViewController.h; sourceTree = "<group>"; };
+		3DC68F4320B66B6B0093F222 /* JRStringViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRStringViewController.m; sourceTree = "<group>"; };
 		3DF53E4B20901A160052DB1F /* TestProduct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestProduct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF53E5720901A160052DB1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF53E6320901A170052DB1F /* TestProductTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestProductTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -353,6 +356,8 @@
 				3D0259FE20A290D7008CEDBB /* JRDictionaryStructureViewController.m */,
 				3D025A0020A290E8008CEDBB /* JRClassStructureViewController.h */,
 				3D025A0120A290E8008CEDBB /* JRClassStructureViewController.m */,
+				3DC68F4220B66B6B0093F222 /* JRStringViewController.h */,
+				3DC68F4320B66B6B0093F222 /* JRStringViewController.m */,
 				3DC68EFE20A4284F0093F222 /* JRResponderChainViewController.h */,
 				3DC68EFF20A4284F0093F222 /* JRResponderChainViewController.m */,
 				3DC68F0120A437E50093F222 /* ResponderView */,
@@ -727,6 +732,7 @@
 				3D0259ED20A0566E008CEDBB /* JRTransitionDelegate.m in Sources */,
 				3D0259C6209AD497008CEDBB /* NSString+JRNSStringCategory.m in Sources */,
 				3D0259D6209AE4AC008CEDBB /* JRFirstViewController.m in Sources */,
+				3DC68F4420B66B6B0093F222 /* JRStringViewController.m in Sources */,
 				3D0259CC209AD4D3008CEDBB /* NSDictionary+JRNSDictionaryCategory.m in Sources */,
 				3D8FF6E6209185C90016B295 /* main.m in Sources */,
 				3D0259C1209AD3AE008CEDBB /* UIImage+JRImageCategory.m in Sources */,

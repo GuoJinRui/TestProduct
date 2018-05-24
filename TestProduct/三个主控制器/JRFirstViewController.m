@@ -14,6 +14,8 @@ typedef void(^TestBlock)(void);
 @interface JRFirstViewController ()
 
 @property(strong,nonatomic)UIButton * testButton;
+@property(strong,nonatomic)UIButton * testButton_1;
+
 @property (nonatomic,strong) NSMutableArray * testArray;
 @property(copy,nonatomic) TestBlock testBlock;
 
@@ -26,10 +28,16 @@ typedef void(^TestBlock)(void);
     [super viewDidLoad];
 //    NSLog(@"%s", __func__);
     _testButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
-    [_testButton setFrame:CGRectMake(100, 0, 100, 50)];
+    [_testButton setFrame:CGRectMake(100, 200, 100, 50)];
     [_testButton setBackgroundColor:[UIColor blueColor]];
     [_testButton addTarget:self action:@selector(testButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
     [self.view addSubview:_testButton];
+    
+    _testButton_1 = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    [_testButton_1 setFrame:CGRectMake(100, 400, 100, 50)];
+    [_testButton_1 setBackgroundColor:[UIColor blueColor]];
+    [_testButton_1 addTarget:self action:@selector(otherTestButtonAction) forControlEvents:(UIControlEventTouchUpInside)];
+    [self.view addSubview:_testButton_1];
     
 }
 
@@ -49,12 +57,19 @@ typedef void(^TestBlock)(void);
 
     
     
-    
-    
-    
-    
-    
+    // clean memory
+    char * buf = malloc(100*1024*1024);
+    NSLog(@"%s", buf);
 }
+- (void)otherTestButtonAction
+{
+    char *buf = malloc(100*1024*1024);
+    // dirty memory
+    for(int i=0; i < 30*1024*1024; ++i){
+        buf[i] = rand();
+    }
+}
+
 //- (void)viewWillAppear:(BOOL)animated
 //{
 //    NSLog(@"%s", __func__);

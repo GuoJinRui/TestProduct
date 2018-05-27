@@ -915,7 +915,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/homebox/Desktop/Git/TestProduct/Header/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestProduct/Header/PrefixHeader.pch";
 				INFOPLIST_FILE = TestProduct/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -937,7 +937,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/homebox/Desktop/Git/TestProduct/Header/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestProduct/Header/PrefixHeader.pch";
 				INFOPLIST_FILE = TestProduct/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

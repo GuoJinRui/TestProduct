@@ -6,6 +6,9 @@
 //  Copyright © 2018年 homebox. All rights reserved.
 //
 
+#import <RPSDK/RPSDK.h>
+
+
 typedef void(^TestBlock)(void);
 
 #import "JRFirstViewController.h"
@@ -43,31 +46,39 @@ typedef void(^TestBlock)(void);
 
 - (void)testButtonAction
 {
-//    __block int aaa  = 15;
-//    UIView * aView = [[UIView alloc] init];
-//    __weak typeof(aView) weakView;
-//    self.testBlock = ^{
-//        aaa  += 10;
-//        NSLog(@"block内部aaa = %d", aaa);
-////        aView.frame = CGRectMake(100, 100, 200, 200);//在block内部使用view对象，系统会对view强引用，此时会造成内存泄漏。
-//        weakView.frame = CGRectMake(100, 100, 200, 200);
-//    };
-//    self.testBlock();
-//    NSLog(@"block外部aaa = %d", aaa);
-
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    NSURL *URL = [NSURL URLWithString:@"http://10.50.12.50:8080/face/idcardlivedetectfour"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSString *str = [[NSBundle mainBundle] resourcePath];
+    NSString *filePathStr = [NSString stringWithFormat:@"%@%@",str,@"/1234.mp4"];
+    NSURL *filePath = [NSURL fileURLWithPath:filePathStr];
+    NSURLSessionUploadTask *uploadTask = [manager uploadTaskWithRequest:request fromFile:filePath progress:nil completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSLog(@"Success: %@ %@", response, responseObject);
+        }
+        NSLog(@"dddd");
+    }];
+    [uploadTask resume];
     
-    
-    // clean memory
-    char * buf = malloc(100*1024*1024);
-    NSLog(@"%s", buf);
 }
 - (void)otherTestButtonAction
 {
-    char *buf = malloc(100*1024*1024);
-    // dirty memory
-    for(int i=0; i < 30*1024*1024; ++i){
-        buf[i] = rand();
-    }
+    [RPSDK start:@"aa351325e6624b85bb61949b598ad0ab" rpCompleted:^(AUDIT auditState) {
+        NSLog(@"verifyResult = %ld",(unsigned long)auditState);
+        if(auditState == AUDIT_PASS) { //认证通过
+        }
+        else if(auditState == AUDIT_FAIL) { //认证不通过
+        }
+        else if(auditState == AUDIT_IN_AUDIT) { //认证中，通常不会出现，只有在认证审核系统内部出现超时，未在限定时间内返回认证结果时出现。此时提示用户系统处理中，稍后查看认证结果即可。
+        }
+        else if(auditState == AUDIT_NOT) { //未认证，用户取消
+        }
+        else if(auditState == AUDIT_EXCEPTION) { //系统异常
+        }
+    }withVC:self.navigationController];
 }
 
 //- (void)viewWillAppear:(BOOL)animated

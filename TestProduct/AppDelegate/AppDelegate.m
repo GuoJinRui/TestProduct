@@ -6,6 +6,9 @@
 //  Copyright © 2018年 homebox. All rights reserved.
 //
 
+#import <RPSDK/RPSDK.h>
+
+
 #import "AppDelegate.h"
 #import "BaseNavigationViewController.h"
 #import "BaseTabBarViewController.h"
@@ -21,6 +24,10 @@
 // 这个方法是你在启动时的第一次机会来执行代码
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [RPSDK initialize:RPSDKEnvOnline];
+  
+    
     // 设置抽屉
     JRLeftViewController * leftVC = [JRLeftViewController new];
     BaseTabBarViewController * centerVC = [BaseTabBarViewController new];

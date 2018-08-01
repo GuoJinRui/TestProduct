@@ -26,7 +26,7 @@
     return coding;
 }
 
-- (NSString*)encryptOrDecryptWithData:(NSData *) data With3DES:(CCOperation)encryptOrDecrypt key:(NSString*)key
+- (NSString*)encryptOrDecryptWithData:(NSData *)data With3DES:(CCOperation)encryptOrDecrypt key:(NSString*)key
 {
     const void * vplainText;
     size_t plainTextBufferSize;
@@ -66,7 +66,7 @@
                        (void *)bufferPtr,
                        bufferPtrSize,
                        &movedBytes);
-    //if (ccStatus == kCCSuccess) NSLog(@"SUCCESS");
+    if (ccStatus == kCCSuccess) NSLog(@"SUCCESS");
     /*else if (ccStatus == kCC ParamError) return @"PARAM ERROR";
      else if (ccStatus == kCCBufferTooSmall) return @"BUFFER TOO SMALL";
      else if (ccStatus == kCCMemoryFailure) return @"MEMORY FAILURE";

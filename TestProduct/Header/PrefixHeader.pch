@@ -15,7 +15,7 @@
 #import <DKNightVersion/DKNightVersion.h>
 #import "FMDB.h"
 
-// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。因为不适用前缀会和YYKit的扩展发生冲突使masonry无法分辨所以这里先注销掉
 #define MAS_SHORTHAND
 // 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
 #define MAS_SHORTHAND_GLOBALS
@@ -47,10 +47,16 @@
 
 
 
+/**
+ *  快捷宏
+ */
 
-
-
-
+// DEBUG
+#ifdef DEBUG
+#define JRLog(...) printf("[%s] %s [第%d行]: %s\n", __TIME__ ,__PRETTY_FUNCTION__ ,__LINE__, [[NSString stringWithFormat:__VA_ARGS__] UTF8String])
+#else
+#define JRLog(...)
+#endif
 
 // 帮助实现单例设计模式
 // .h文件的实现

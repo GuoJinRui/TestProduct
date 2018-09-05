@@ -78,7 +78,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     //重写了leftbarItem之后,需要添加如下方法才能重新启用右滑返回
     if ([self respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.interactivePopGestureRecognizer.delegate = nil;
+        // 直接这样设置会导致iOS视图push的时候偶尔卡住,push不过去问题，导航栏的标题是下个页面的，view还是当前的
+        self.interactivePopGestureRecognizer.delegate =(id)self;
+        // 原因是手势pop的问题. 当处在navigation的根控制器时候, 做一个侧滑pop的操作, 看起来没任何变化, 但是再次push其它控制器时候就会出现上述问题了。so 还需要补救措施！！！，具体查看BaseViewController
     }
 }
 

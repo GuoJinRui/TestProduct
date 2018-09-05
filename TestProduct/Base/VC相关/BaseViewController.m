@@ -14,6 +14,17 @@
 
 @implementation BaseViewController
 
+// 判断当前页面是不是根视图，如果是就禁止掉右划手势，如果不是就打开
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (self.navigationController.viewControllers.firstObject == self) {
+        self.navigationController.interactivePopGestureRecognizer.enabled = false;
+    }else{
+        self.navigationController.interactivePopGestureRecognizer.enabled = true;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];

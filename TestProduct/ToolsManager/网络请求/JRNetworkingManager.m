@@ -33,7 +33,7 @@ static YYCache * _dataCache;
     _sessionManager = [AFHTTPSessionManager manager];
     // 设置请求类型:(AFHTTPRequestSerializer,AFJSONRequestSerializer，AFPropertyListRequestSerializer)
     // AFHTTPSessionManager默认情况下是使用AFHTTPRequestSerializer的实例，它为`GET`、`HEAD`和`DELETE`请求序列化查询字符串参数，或以其他方式对HTTP消息体进行URL格式编码。
-    _sessionManager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    _sessionManager.requestSerializer = [AFJSONRequestSerializer serializer];
     // 设置请求超时时间 默认60s
     _sessionManager.requestSerializer.timeoutInterval = 30.f;
     
@@ -289,6 +289,7 @@ static YYCache * _dataCache;
                       failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure
 {
     NSURLSessionTask *sessionTask;
+//    NSString * jsonStr = [parameters jsonStringEncoded];
     if (method == JRRequestMethodGET){
         sessionTask = [_sessionManager GET:url parameters:parameters progress:nil success:callback failure:failure];
     }else if (method == JRRequestMethodPOST) {

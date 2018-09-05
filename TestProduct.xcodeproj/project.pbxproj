@@ -52,23 +52,6 @@
 		3DF53E7320901A170052DB1F /* TestProductUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF53E7220901A170052DB1F /* TestProductUITests.m */; };
 		78B68050210AC4A9001AC945 /* JRNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B6804F210AC4A9001AC945 /* JRNetworkingManager.m */; };
 		78B68052210EB182001AC945 /* 1234.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78B68051210EB182001AC945 /* 1234.mp4 */; };
-		78B68062210F16EC001AC945 /* WindVaneBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68055210F16E6001AC945 /* WindVaneBridge.framework */; };
-		78B68063210F16EC001AC945 /* SGSecurityBody.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68056210F16E6001AC945 /* SGSecurityBody.framework */; };
-		78B68064210F16EC001AC945 /* SGMain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68057210F16E7001AC945 /* SGMain.framework */; };
-		78B68065210F16EC001AC945 /* WindVane.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68058210F16E7001AC945 /* WindVane.framework */; };
-		78B68066210F16EC001AC945 /* ZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68059210F16E7001AC945 /* ZipArchive.framework */; };
-		78B68067210F16EC001AC945 /* FaceLivenessOpen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6805A210F16E8001AC945 /* FaceLivenessOpen.framework */; };
-		78B68068210F16EC001AC945 /* AliyunOSSiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6805B210F16E8001AC945 /* AliyunOSSiOS.framework */; };
-		78B68069210F16EC001AC945 /* AliReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6805C210F16E8001AC945 /* AliReachability.framework */; };
-		78B6806A210F16EC001AC945 /* SecurityGuardSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6805D210F16E9001AC945 /* SecurityGuardSDK.framework */; };
-		78B6806B210F16EC001AC945 /* WindVaneBasic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6805E210F16EA001AC945 /* WindVaneBasic.framework */; };
-		78B6806C210F16EC001AC945 /* SGNoCaptcha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B6805F210F16EB001AC945 /* SGNoCaptcha.framework */; };
-		78B6806D210F16EC001AC945 /* WindVaneCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68060210F16EC001AC945 /* WindVaneCore.framework */; };
-		78B6806E210F16EC001AC945 /* RPSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68061210F16EC001AC945 /* RPSDK.framework */; };
-		78B68072210F1706001AC945 /* RPSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78B6806F210F1705001AC945 /* RPSDK.bundle */; };
-		78B68073210F1706001AC945 /* FaceLivenessSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78B68070210F1705001AC945 /* FaceLivenessSDK.bundle */; };
-		78B68074210F1706001AC945 /* FaceTheme.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 78B68071210F1706001AC945 /* FaceTheme.bundle */; };
-		78B68076210F171A001AC945 /* yw_1222_0769.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 78B68075210F171A001AC945 /* yw_1222_0769.jpg */; };
 		78B6807B210F1789001AC945 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68077210F1789001AC945 /* CoreLocation.framework */; };
 		78B6807C210F1789001AC945 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68078210F1789001AC945 /* CoreMedia.framework */; };
 		78B6807D210F1789001AC945 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68079210F1789001AC945 /* CoreTelephony.framework */; };
@@ -198,23 +181,6 @@
 		78B6804E210AC4A9001AC945 /* JRNetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRNetworkingManager.h; sourceTree = "<group>"; };
 		78B6804F210AC4A9001AC945 /* JRNetworkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRNetworkingManager.m; sourceTree = "<group>"; };
 		78B68051210EB182001AC945 /* 1234.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1234.mp4; sourceTree = "<group>"; };
-		78B68055210F16E6001AC945 /* WindVaneBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindVaneBridge.framework; sourceTree = "<group>"; };
-		78B68056210F16E6001AC945 /* SGSecurityBody.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGSecurityBody.framework; sourceTree = "<group>"; };
-		78B68057210F16E7001AC945 /* SGMain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGMain.framework; sourceTree = "<group>"; };
-		78B68058210F16E7001AC945 /* WindVane.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindVane.framework; sourceTree = "<group>"; };
-		78B68059210F16E7001AC945 /* ZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ZipArchive.framework; sourceTree = "<group>"; };
-		78B6805A210F16E8001AC945 /* FaceLivenessOpen.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FaceLivenessOpen.framework; sourceTree = "<group>"; };
-		78B6805B210F16E8001AC945 /* AliyunOSSiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AliyunOSSiOS.framework; sourceTree = "<group>"; };
-		78B6805C210F16E8001AC945 /* AliReachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AliReachability.framework; sourceTree = "<group>"; };
-		78B6805D210F16E9001AC945 /* SecurityGuardSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SecurityGuardSDK.framework; sourceTree = "<group>"; };
-		78B6805E210F16EA001AC945 /* WindVaneBasic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindVaneBasic.framework; sourceTree = "<group>"; };
-		78B6805F210F16EB001AC945 /* SGNoCaptcha.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SGNoCaptcha.framework; sourceTree = "<group>"; };
-		78B68060210F16EC001AC945 /* WindVaneCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindVaneCore.framework; sourceTree = "<group>"; };
-		78B68061210F16EC001AC945 /* RPSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RPSDK.framework; sourceTree = "<group>"; };
-		78B6806F210F1705001AC945 /* RPSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = RPSDK.bundle; sourceTree = "<group>"; };
-		78B68070210F1705001AC945 /* FaceLivenessSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FaceLivenessSDK.bundle; sourceTree = "<group>"; };
-		78B68071210F1706001AC945 /* FaceTheme.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FaceTheme.bundle; sourceTree = "<group>"; };
-		78B68075210F171A001AC945 /* yw_1222_0769.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222_0769.jpg; sourceTree = "<group>"; };
 		78B68077210F1789001AC945 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		78B68078210F1789001AC945 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		78B68079210F1789001AC945 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -259,20 +225,7 @@
 				78B6807C210F1789001AC945 /* CoreMedia.framework in Frameworks */,
 				78B6807D210F1789001AC945 /* CoreTelephony.framework in Frameworks */,
 				78B6807E210F1789001AC945 /* CoreMotion.framework in Frameworks */,
-				78B68065210F16EC001AC945 /* WindVane.framework in Frameworks */,
-				78B6806D210F16EC001AC945 /* WindVaneCore.framework in Frameworks */,
 				B759BAB1516F952C54931443 /* Pods_TestProduct.framework in Frameworks */,
-				78B6806B210F16EC001AC945 /* WindVaneBasic.framework in Frameworks */,
-				78B68062210F16EC001AC945 /* WindVaneBridge.framework in Frameworks */,
-				78B6806E210F16EC001AC945 /* RPSDK.framework in Frameworks */,
-				78B6806C210F16EC001AC945 /* SGNoCaptcha.framework in Frameworks */,
-				78B68067210F16EC001AC945 /* FaceLivenessOpen.framework in Frameworks */,
-				78B68068210F16EC001AC945 /* AliyunOSSiOS.framework in Frameworks */,
-				78B68066210F16EC001AC945 /* ZipArchive.framework in Frameworks */,
-				78B68063210F16EC001AC945 /* SGSecurityBody.framework in Frameworks */,
-				78B68069210F16EC001AC945 /* AliReachability.framework in Frameworks */,
-				78B68064210F16EC001AC945 /* SGMain.framework in Frameworks */,
-				78B6806A210F16EC001AC945 /* SecurityGuardSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,9 +510,9 @@
 				3DC68F1A20AC2DB70093F222 /* JRCodeEncryptOrDecrypt.h */,
 				3DC68F1920AC2DB70093F222 /* JRCodeEncryptOrDecrypt.m */,
 				3DC68F3620B29B5E0093F222 /* wespace.cer */,
+				3D8FF6DE209185C90016B295 /* AppDelegate */,
 				3D0259B0209AA326008CEDBB /* Base */,
 				3D0259CD209AE3F4008CEDBB /* 抽屉控制器 */,
-				3D8FF6DE209185C90016B295 /* AppDelegate */,
 				3D0259D7209AE4B9008CEDBB /* 三个主控制器 */,
 				3D0259EA20A04716008CEDBB /* 自定义控件 */,
 				3D0259BB209AD31A008CEDBB /* Category */,
@@ -619,33 +572,8 @@
 		78B68053210F1658001AC945 /* Third */ = {
 			isa = PBXGroup;
 			children = (
-				78B68054210F1688001AC945 /* ALi */,
 			);
 			path = Third;
-			sourceTree = "<group>";
-		};
-		78B68054210F1688001AC945 /* ALi */ = {
-			isa = PBXGroup;
-			children = (
-				78B68075210F171A001AC945 /* yw_1222_0769.jpg */,
-				78B68070210F1705001AC945 /* FaceLivenessSDK.bundle */,
-				78B68071210F1706001AC945 /* FaceTheme.bundle */,
-				78B6806F210F1705001AC945 /* RPSDK.bundle */,
-				78B6805C210F16E8001AC945 /* AliReachability.framework */,
-				78B6805B210F16E8001AC945 /* AliyunOSSiOS.framework */,
-				78B6805A210F16E8001AC945 /* FaceLivenessOpen.framework */,
-				78B68061210F16EC001AC945 /* RPSDK.framework */,
-				78B6805D210F16E9001AC945 /* SecurityGuardSDK.framework */,
-				78B68057210F16E7001AC945 /* SGMain.framework */,
-				78B6805F210F16EB001AC945 /* SGNoCaptcha.framework */,
-				78B68056210F16E6001AC945 /* SGSecurityBody.framework */,
-				78B68058210F16E7001AC945 /* WindVane.framework */,
-				78B6805E210F16EA001AC945 /* WindVaneBasic.framework */,
-				78B68055210F16E6001AC945 /* WindVaneBridge.framework */,
-				78B68060210F16EC001AC945 /* WindVaneCore.framework */,
-				78B68059210F16E7001AC945 /* ZipArchive.framework */,
-			);
-			path = ALi;
 			sourceTree = "<group>";
 		};
 		C30F71BF6F0592D4D79BC397 /* Frameworks */ = {
@@ -783,14 +711,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78B68073210F1706001AC945 /* FaceLivenessSDK.bundle in Resources */,
-				78B68074210F1706001AC945 /* FaceTheme.bundle in Resources */,
-				78B68076210F171A001AC945 /* yw_1222_0769.jpg in Resources */,
 				3DC68F3E20B3BEB90093F222 /* index.html in Resources */,
 				3DC68F3720B29B5E0093F222 /* wespace.cer in Resources */,
 				78B68052210EB182001AC945 /* 1234.mp4 in Resources */,
 				3DF53E5820901A160052DB1F /* Assets.xcassets in Resources */,
-				78B68072210F1706001AC945 /* RPSDK.bundle in Resources */,
 				3D8FF6EF209185FF0016B295 /* Main.storyboard in Resources */,
 				3D8FF6EE209185FF0016B295 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -1104,12 +1028,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Third/ALi",
+					"$(PROJECT_DIR)/Third/ALi/client",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestProduct/Header/PrefixHeader.pch";
 				INFOPLIST_FILE = TestProduct/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = homeBox.TestProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1131,12 +1056,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Third/ALi",
+					"$(PROJECT_DIR)/Third/ALi/client",
 				);
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestProduct/Header/PrefixHeader.pch";
 				INFOPLIST_FILE = TestProduct/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = homeBox.TestProduct;
 				PRODUCT_NAME = "$(TARGET_NAME)";

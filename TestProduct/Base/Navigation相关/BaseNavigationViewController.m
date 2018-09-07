@@ -52,8 +52,8 @@
         // 修改左边item
         viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navigationBar_leftItem"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]style:UIBarButtonItemStylePlain target:self action:@selector(popSelfAction)];
         // 关闭抽屉效果
-        MMDrawerController * drawerController = (MMDrawerController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
+//        MMDrawerController * drawerController = (MMDrawerController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
     }
     [super pushViewController:viewController animated:animated];
 }
@@ -66,9 +66,9 @@
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated
 {
     if (self.viewControllers.count == 2) { // 此时第二层控制器尚未出栈所以要判断count是否为2
-        // 打开抽屉效果
-        MMDrawerController * drawerController = (MMDrawerController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+//        // 打开抽屉效果
+//        MMDrawerController * drawerController = (MMDrawerController *)[UIApplication sharedApplication].keyWindow.rootViewController;
+//        drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     }
     return [super popViewControllerAnimated:animated];
 }

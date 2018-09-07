@@ -20,10 +20,14 @@ target 'TestProduct' do
   pod 'MMDrawerController', '~> 0.6.0'
   pod 'DKNightVersion', '~> 2.4.3'
   pod 'SDCycleScrollView', '~> 1.75'
-  pod 'RDVTabBarController', '~> 1.1.9'
+  pod 'IQKeyboardManager', '~> 6.0.4'
+  pod 'TTTAttributedLabel', '~> 2.0.0'
+  pod 'TZImagePickerController'
+  pod 'FLAnimatedImage', '~> 1.0.12'
 
+  
 =begin
-
+  pod 'RDVTabBarController', '~> 1.1.9'
   pod 'YYCategories', '~> 1.0.4'
   pod 'YYCache', '~> 1.0.4'
   pod 'YYDispatchQueuePool', '~> 1.0'

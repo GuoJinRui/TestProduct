@@ -50,6 +50,10 @@
 		3DF53E5820901A160052DB1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF53E5720901A160052DB1F /* Assets.xcassets */; };
 		3DF53E6820901A170052DB1F /* TestProductTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF53E6720901A170052DB1F /* TestProductTests.m */; };
 		3DF53E7320901A170052DB1F /* TestProductUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF53E7220901A170052DB1F /* TestProductUITests.m */; };
+		789A10EA214201EE00E3FFBE /* XLImageLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A10E2214201EE00E3FFBE /* XLImageLoading.m */; };
+		789A10EB214201EE00E3FFBE /* XLImageViewerTooBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A10E3214201EE00E3FFBE /* XLImageViewerTooBar.m */; };
+		789A10EC214201EE00E3FFBE /* XLImageViewerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A10E8214201EE00E3FFBE /* XLImageViewerItem.m */; };
+		789A10ED214201EE00E3FFBE /* XLImageViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 789A10E9214201EE00E3FFBE /* XLImageViewer.m */; };
 		78B68050210AC4A9001AC945 /* JRNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 78B6804F210AC4A9001AC945 /* JRNetworkingManager.m */; };
 		78B68052210EB182001AC945 /* 1234.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 78B68051210EB182001AC945 /* 1234.mp4 */; };
 		78B6807B210F1789001AC945 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78B68077210F1789001AC945 /* CoreLocation.framework */; };
@@ -178,6 +182,14 @@
 		3DF53E7220901A170052DB1F /* TestProductUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestProductUITests.m; sourceTree = "<group>"; };
 		3DF53E7420901A170052DB1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E893AEFC40F1599BA574B2F /* Pods-TestProduct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestProduct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestProduct/Pods-TestProduct.debug.xcconfig"; sourceTree = "<group>"; };
+		789A10E2214201EE00E3FFBE /* XLImageLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLImageLoading.m; sourceTree = "<group>"; };
+		789A10E3214201EE00E3FFBE /* XLImageViewerTooBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLImageViewerTooBar.m; sourceTree = "<group>"; };
+		789A10E4214201EE00E3FFBE /* XLImageViewerItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLImageViewerItem.h; sourceTree = "<group>"; };
+		789A10E5214201EE00E3FFBE /* XLImageViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLImageViewer.h; sourceTree = "<group>"; };
+		789A10E6214201EE00E3FFBE /* XLImageLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLImageLoading.h; sourceTree = "<group>"; };
+		789A10E7214201EE00E3FFBE /* XLImageViewerTooBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLImageViewerTooBar.h; sourceTree = "<group>"; };
+		789A10E8214201EE00E3FFBE /* XLImageViewerItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLImageViewerItem.m; sourceTree = "<group>"; };
+		789A10E9214201EE00E3FFBE /* XLImageViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLImageViewer.m; sourceTree = "<group>"; };
 		78B6804E210AC4A9001AC945 /* JRNetworkingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRNetworkingManager.h; sourceTree = "<group>"; };
 		78B6804F210AC4A9001AC945 /* JRNetworkingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRNetworkingManager.m; sourceTree = "<group>"; };
 		78B68051210EB182001AC945 /* 1234.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 1234.mp4; sourceTree = "<group>"; };
@@ -358,6 +370,7 @@
 		3D0259EA20A04716008CEDBB /* 自定义控件 */ = {
 			isa = PBXGroup;
 			children = (
+				789A10E0214201C900E3FFBE /* 大图查看 */,
 				3D8FF6F0209408E70016B295 /* 自定义弹框 */,
 			);
 			path = "自定义控件";
@@ -551,6 +564,29 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		789A10E0214201C900E3FFBE /* 大图查看 */ = {
+			isa = PBXGroup;
+			children = (
+				789A10E1214201EE00E3FFBE /* XLImageViewer */,
+			);
+			path = "大图查看";
+			sourceTree = "<group>";
+		};
+		789A10E1214201EE00E3FFBE /* XLImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				789A10E2214201EE00E3FFBE /* XLImageLoading.m */,
+				789A10E3214201EE00E3FFBE /* XLImageViewerTooBar.m */,
+				789A10E4214201EE00E3FFBE /* XLImageViewerItem.h */,
+				789A10E5214201EE00E3FFBE /* XLImageViewer.h */,
+				789A10E6214201EE00E3FFBE /* XLImageLoading.h */,
+				789A10E7214201EE00E3FFBE /* XLImageViewerTooBar.h */,
+				789A10E8214201EE00E3FFBE /* XLImageViewerItem.m */,
+				789A10E9214201EE00E3FFBE /* XLImageViewer.m */,
+			);
+			path = XLImageViewer;
+			sourceTree = "<group>";
+		};
 		78B6804C210AC45B001AC945 /* ToolsManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -614,7 +650,6 @@
 				3DF53E4820901A160052DB1F /* Frameworks */,
 				3DF53E4920901A160052DB1F /* Resources */,
 				E7A6D922571CF38488FFEBB4 /* [CP] Embed Pods Frameworks */,
-				4D110E321DC5B56029C9B308 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -755,21 +790,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		4D110E321DC5B56029C9B308 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestProduct/Pods-TestProduct-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E7A6D922571CF38488FFEBB4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -779,30 +799,36 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-TestProduct/Pods-TestProduct-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DKNightVersion/DKNightVersion.framework",
+				"${BUILT_PRODUCTS_DIR}/FLAnimatedImage/FLAnimatedImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/RDVTabBarController/RDVTabBarController.framework",
 				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/TZImagePickerController/TZImagePickerController.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DKNightVersion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLAnimatedImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RDVTabBarController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TZImagePickerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -819,6 +845,7 @@
 			files = (
 				3D0259DD209AE51B008CEDBB /* JRThirdViewController.m in Sources */,
 				3D0259E620A02075008CEDBB /* UIButton+JRButtonCategory.m in Sources */,
+				789A10EA214201EE00E3FFBE /* XLImageLoading.m in Sources */,
 				3D0259F620A1A7E9008CEDBB /* JRPopoverMiddleViewController.m in Sources */,
 				3D0259A9209991F5008CEDBB /* JRVCAnimatedTransitioning.m in Sources */,
 				78B68050210AC4A9001AC945 /* JRNetworkingManager.m in Sources */,
@@ -827,8 +854,10 @@
 				3D0259E0209AFCFA008CEDBB /* JRDefineTabBar.m in Sources */,
 				3D0259C9209AD4AD008CEDBB /* NSArray+JRNSArrayCategory.m in Sources */,
 				3D0259B9209AA5AC008CEDBB /* BaseViewController.m in Sources */,
+				789A10EB214201EE00E3FFBE /* XLImageViewerTooBar.m in Sources */,
 				3DC68F0720A4381F0093F222 /* JRTestView_red.m in Sources */,
 				3DC68F1B20AC2DB70093F222 /* JRCodeEncryptOrDecrypt.m in Sources */,
+				789A10EC214201EE00E3FFBE /* XLImageViewerItem.m in Sources */,
 				3DC68F0420A4380F0093F222 /* JRTestView_yellow.m in Sources */,
 				3D0259BE209AD38A008CEDBB /* UIColor+JRColorCategory.m in Sources */,
 				3DC68F1020A91D830093F222 /* BasePresentNavigationViewController.m in Sources */,
@@ -840,6 +869,7 @@
 				3D0259C6209AD497008CEDBB /* NSString+JRNSStringCategory.m in Sources */,
 				3D0259D6209AE4AC008CEDBB /* JRFirstViewController.m in Sources */,
 				3DC68F4420B66B6B0093F222 /* JRStringViewController.m in Sources */,
+				789A10ED214201EE00E3FFBE /* XLImageViewer.m in Sources */,
 				3D0259CC209AD4D3008CEDBB /* NSDictionary+JRNSDictionaryCategory.m in Sources */,
 				3D8FF6E6209185C90016B295 /* main.m in Sources */,
 				3D0259C1209AD3AE008CEDBB /* UIImage+JRImageCategory.m in Sources */,

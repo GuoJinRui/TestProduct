@@ -28,16 +28,28 @@
 #import "SDCycleScrollView.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <YYKit/YYKit.h>
+#import "IQKeyboardManager.h"
+#import "TZImagePickerController.h"
 
+
+// iOS10注册APNs所需头文件
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
 
 // 自定义分类的添加
 #import "UIButton+JRButtonCategory.h"
 #import "UIImage+JRImageCategory.h"
 #import "UIColor+JRColorCategory.h"
+#import "NSString+JRNSStringCategory.h"
+#import "NSArray+JRNSArrayCategory.h"
+#import "NSDictionary+JRNSDictionaryCategory.h"
 
 
-
-
+/**
+ *  本APP常用头文件
+ */
+#import "JRNetworkingManager.h"
 
 
 
@@ -50,6 +62,27 @@
 /**
  *  快捷宏
  */
+// 获取屏幕宽高
+#define JRScreenW  [UIScreen mainScreen].bounds.size.width
+#define JRScreenH  [UIScreen mainScreen].bounds.size.height
+// RGB颜色
+#define JRRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define JRRGBAColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(r)/255.0 blue:(r)/255.0 alpha:a]
+// 弱引用，强引用
+#define JRWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define JRStrongSelf(type)  __strong typeof(type) type = weak##type;
+//判断是否为iPhone、iPad
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+// 判断是否为 iPhone5/SE
+#define IS_iPhone5_SE ([[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+// 判断是否为iPhone6/6s
+#define IS_iPhone6_6s ([[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f)
+// 判断是否为iPhone6Plus/6sPlus
+#define IS_iPhone6P_6sP ([[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f)
+// 快速NSUserDefaults
+#define UserDefaults [NSUserDefaults standardUserDefaults]
+
 
 // DEBUG
 #ifdef DEBUG
